@@ -1,5 +1,3 @@
-' Calls OpenUrl Utils -> ShellExecute
-
 Public Sub OpenLinkIssue(indCol As Integer)
 ' indCol: Column index of Mapping table triggered
 
@@ -98,7 +96,6 @@ For I = 0 To UBound(strArrayID)
     If HasNumber(strArrayID(I)) Then
         strLink = strPreLink & strArrayID(I)
         ' MsgBox strLink
-        'OpenUrl (strLink)
         ThisWorkbook.FollowHyperlink Address:=strLink
     Else
         Debug.Print "Skip open issue '" & strArrayID(I) & "' because no number in the string."
